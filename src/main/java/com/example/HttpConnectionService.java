@@ -6,6 +6,12 @@ import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
 public class HttpConnectionService {
+    /**
+     *
+     * Retorna estadísticas de coronavirus de varios paises por medio de una API
+     * @return JsonNode
+     * @throws UnirestException
+     */
     public JsonNode getAllCases() throws UnirestException {
         HttpResponse<JsonNode> response = Unirest
                 .get("https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats")
@@ -17,7 +23,13 @@ public class HttpConnectionService {
         //assertEquals((int)HttpStatus.SC_OK,response.getStatus());
     }
 
-
+    /**
+     *
+     * Retorna estadisticas de coronavirus de un pais en concreto por medio de una API
+     * @param country
+     * @return
+     * @throws UnirestException
+     */
     public JsonNode getCaseByCountry(String country) throws UnirestException {
         HttpResponse<JsonNode> response = Unirest
                 .get("https://covid-19-coronavirus-statistics.p.rapidapi.com/v1/stats?country="+country)
