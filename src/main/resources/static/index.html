@@ -9,7 +9,7 @@
   <script src="js/apiclient.js"></script>
 
 </head>
-<body>
+<body onload="app.getAllCases();">
 <header>COVID-19 CORONAVIRUS ARSW</header>
 <section id = "content">
   <table style="width:50%" id="table">
@@ -23,6 +23,19 @@
     </thead>
 
     <tbody id="Table_Content">
+
+    </tbody>
+  </table>
+  <h3 id="country_name">Nombre del pais</h3>
+  <table style="width:50%" id="table_Country">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Birth Date</th>
+    </tr>
+    </thead>
+
+    <tbody id="Table_Content_Country">
 
     </tbody>
   </table>

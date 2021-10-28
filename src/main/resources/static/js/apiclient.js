@@ -17,7 +17,7 @@ var apiclient = (function () {
 
         },
 
-        getCasesByCountry: function(name, country, callback) {
+        getCasesByCountry: function(country, callback) {
             $.get({
                     url: "/corona/" + country,
                     contentType: "application/json",
